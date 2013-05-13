@@ -1,0 +1,47 @@
+{{extend 'layout.html'}}
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="Deepak's Website" content="Deepak's Website" />
+    <meta name="Keywords" content="None" />
+    <meta name="Deepak Kathayat" content="Deepak Kathayat" />
+    <link href='http://fonts.googleapis.com/css?family=MedievalSharp' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" href="gallery.css" media="screen" />
+    <script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+</head>
+
+<body>
+<h2>The PicBook Ratings</h2>
+<form><input type="hidden" id="id" name="id" value="" /></form>
+{{for item in items:}}
+<p>
+<center>
+<img src="{{=URL('download', args=item.file)}}"
+     width="200px" />
+<br />
+{{=item.title}}<br/>
+Likes=<span id="item{{=item.id}}">{{=item.votes}}</span>
+<br/>
+Rating: {{=float(item.votes)/float(counter)*10}} / 10
+
+<br/>
+
+</center>
+</p>
+<br/>
+{{pass}}
+           <h2> {{=A('Back to Gallery', _href=URL("Gallery"))}} </h2>
+
+<div id="footer">
+    &middot; © 2012 Deepak Kathayat &middot;
+</div>
+  
+<script type="text/javascript">
+$('.poptroxactive').each(function() {
+   $(this).poptrox();
+});
+</script>
+</body>
+</html>

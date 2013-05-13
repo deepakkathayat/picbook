@@ -1,0 +1,73 @@
+{{extend 'glayout.html'}}
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="Deepak's Website" content="Deepak's Website" />
+    <meta name="Keywords" content="None" />
+    <meta name="Deepak Kathayat" content="Deepak Kathayat" />
+    <link href='http://fonts.googleapis.com/css?family=MedievalSharp' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" href="gallery.css" media="screen" />
+    <script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+</head>
+
+<body>
+<div id="mainwrap">
+
+<div id="cardstyle">
+    <div id="menuwrap">
+        <ul id="iconmenu">
+
+        </ul>
+    </div>
+
+    <div id="content">
+        <div id="pagecontainer">
+            <ul>
+                <li id="Gallery" class="section">
+                <h1>Image: {{=image.title}}</h1>
+               <center>
+<img width="650px" height="450px"
+     src="{{=URL('download', args=image.file)}}" />
+</center>
+<p>
+<form><input type="hidden" id="id" name="id" value="" /></form>
+Likes=<span id="item{{=image.id}}">{{=image.votes}}</span>
+[<span onclick="jQuery('#id').val('{{=image.id}}');
+       ajax('{{=URL('vote')}}', ['id'], 'item{{=image.id}}');">Click to Like</span>]</p>
+       
+                </li>                       
+                                       
+           </ul>
+
+        </div>
+    </div>
+</div>
+{{if len(comments):}}
+  <h2>Comments</h2><br /><p>
+  {{for comment in comments:}}
+    <p>{{=comment.author}} says <i>{{=comment.body}}</i></p>
+  {{pass}}</p>
+{{else:}}
+  <h2>No comments posted yet</h2>
+{{pass}}
+<h2>Post a comment</h2>
+{{=form}}
+
+{{if auth.user.username==image.uploader or auth.user.username=='admin':}}
+   <h1> {{=A('Delete Image', _href=URL("delete", args=image.id))}} </h1>
+    {{pass}}  
+          <h2>  {{=A('Back to Gallery', _href=URL("Gallery"))}} </h2>
+<div id="footer">
+    &middot; © 2012 Deepak Kathayat &middot;
+</div>
+  
+<script type="text/javascript">
+$('.poptroxactive').each(function() {
+   $(this).poptrox();
+});
+</script>
+</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+{{extend 'glayout.html'}}
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="Deepak's Website" content="Deepak's Website" />
+    <meta name="Keywords" content="None" />
+    <meta name="Deepak Kathayat" content="Deepak Kathayat" />
+    <link href='http://fonts.googleapis.com/css?family=MedievalSharp' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+
+    <div id="content">
+        <div id="pagecontainer">
+            <ul>        
+                      
+             <li id="Gallery" class="section">
+                   <center><h2>The PicBook Gallery</h2></center>
+                        <ul>
+                        {{for image in images:}}
+                        {{=LI(A(image.title , _href=URL("show", args=image.id)), ' uploaded by ',image.uploader)}} 
+                       <ul class="poptroxactive">
+                        {{=A('View', _href=URL("download", args=image.file))}} 
+                        </ul>
+                        <br/>
+                        {{pass}}
+                      </ul>       
+                </li>                     
+           
+            </ul>
+           
+          </div>
+          </div>
+       
+<li id="Management" class="right">
+            {{if auth.user.first_name=='Administrator':}}
+{{=A('Manage PicBook', _href=URL("manage"))}}
+{{pass}}
+</li>  
+<li id="Ratings" class="right"><h3>{{=A('The PicBook Ratings', _href=URL("list_items"))}}</h3></li> 
+<div>
+<h2 class="left">Upload an image</h2>
+            {{=form}}
+</div>
+<div id="footer">
+    &middot; © 2012 Deepak Kathayat &middot;
+</div>
+<script type="text/javascript">
+$('.poptroxactive').each(function() {
+   $(this).poptrox();
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+{{extend 'glayout.html'}}
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="Deepak's Website" content="Deepak's Website" />
+    <meta name="Keywords" content="None" />
+    <meta name="Deepak Kathayat" content="Deepak Kathayat" />
+    <link href='http://fonts.googleapis.com/css?family=MedievalSharp' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+                <h2>PicBook Management Interface</h2>
+                {{=BEAUTIFY(grid)}}
+
+           
+
+  
+<script type="text/javascript">
+$('.poptroxactive').each(function() {
+   $(this).poptrox();
+});
+</script>
+<ul id="iconmenu" class="left">
+           <h2> {{=A('Gallery', _href=URL("Gallery"))}} </h2>
+        </ul>
+<div id="footer">
+    &middot; © 2012 Deepak Kathayat &middot;
+</div>
+</body>
+</html>

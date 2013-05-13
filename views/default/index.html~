@@ -1,0 +1,125 @@
+{{extend 'layout.html'}}
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="Deepak's Website" content="Deepak's Website" />
+    <meta name="Keywords" content="None" />
+    <meta name="Deepak Kathayat" content="Deepak Kathayat" />
+    <link href='http://fonts.googleapis.com/css?family=MedievalSharp' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" href="this-is-me.css" media="screen" />
+    <script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <title>Deepaks Website</title>
+</head>
+
+<body>
+<div id="mainwrap">
+
+<div id="cardstyle">
+    <div id="menuwrap">
+        <ul id="iconmenu">
+            <li><a href="#start" title="Start"><img src="img/icons/Goo_S.png" alt="Start" width="90" height="90"/></a></li>
+            <li><a href="#bio" title="Biography"><img src="img/icons/user-male.png" alt="Biography" width="90" height="90" /></a></li>
+            <li><a href="photography.html" title="Portfolio"><img src="img/icons/photos.png" alt="Portfolio" width="90" height="90"/></a></li>
+            <li><a href="#social" title="Social links"><img src="img/icons/GoogleEarth S.png" width="90" height="90" alt="Social links" /></a></li>
+            <li><a href="#contact" title="Contact me"><img src="img/icons/pencil.png" width="90" height="90" alt="Contact me" /></a></li>
+        </ul>
+    </div>
+
+    <div id="content">
+        <div id="pagecontainer">
+            <ul>
+                <li id="start" class="section">
+                    <h1>Deepak Kathayat</h1>
+                    <p class="tagline">Why so Stupid.</p>
+                </li>
+
+                <li id="bio" class="section">
+                    <h2>About Me</h2>
+                    <img class="left" src="img/1.jpg" alt="Deepak Kathayat" width="180" height="190" />
+                    <p>Hi. I am Deepak Kathayat. Welcome to my website.</p>
+                    <p>Most people around me call me by my  first name, some by my last, some call me <em>Wonderboy</em> while some don't call me anymore.</p>              
+                    <p>I am a sophomore at IIIT Hyderabad, pursuing Computer Science and Engineering.</p>
+                    <p>I was born in Mumbai, India on 17th May in the year 1993.</p>    
+                    <p>A photography enthusiast, my passions among many other things include writing and playing soccer.</p>
+                    <p>I can play the easiest of the songs on guitar and still please you.</p>                  
+                    <p>Two of my greatest ambitions in life are to own a boat and see a caterpillar metamorphose into a butterfly.</p>              
+                    
+                    <p class="biomore"><a href="#biomore">More...</a></p>
+                </li>
+                
+                <li id="biomore" class="section">
+                    <h2>About Me</h2>
+                    <img class="right" src="img/me.jpg" alt="Deepak Kathayat" width="200" height="200" />
+                    <p>At random times in a day, I dream of an orange-colored evening.</p>
+                    <p>I like the sky ten minutes before it rains, making a brief eye contact with someone of opposite sex and waking up to realise that I have more time to sleep.</p>             
+                    <p>Have you ever tried putting your hand in a sack of grains? Or tried to think why rain drops fall in different sizes?</p>
+                    <p>You are not going to be forming some opinion about me now? Are you?</p>  
+                    <p>I possibly have a hundred billion brain cells(so do you), the interconnections(read synapses) among which surpass the number of atoms in the universe. <br/>A Webpage is definitely not enough for that!</p>
+                    <p class="about"><a href="#about">More...</a></p>                                   
+                    <p class="biomore"><a href="#bio">Back</a></p>
+
+                </li>
+                
+                <li id="about" class="section">
+                    <h2>What the Website is about.</h2>
+                    <img class="left" src="img/2.jpg" alt="Deepak Kathayat" width="195" height="195" />
+                    <p>The website is primarily a portfolio for my photography.</p>
+                    <p>Besides, you can also check out my blog. I've also put up my contact information, in case you want to contact me.</p>                
+                    <p>Here is a link to my <a href="res.pdf" >resume</a>.</p>                      
+                    <p>For the website, I've used the jQuery slider developed by Andreas Viklund and lots of Sketchy Icons from the web.</p>
+                        
+                    <p class="biomore"><a href="#biomore">Back</a></p>
+                </li>
+
+                
+            <li id="social" class="section">
+                    <h2>Social networks</h2>
+                    <ul>
+                        <li><a href="http://unwinkingeyeballs.blogspot.in" class="external"><img src="img/icons/Blogger-icon.png" width="36" height="36" alt="Blogger" />
+                        <strong>Blog</strong> unwinkingeyeballs.blogspot.in</a></li>
+                        <li><a href="http://gmail.com/" class="external"><img src="img/icons/gmail.jpeg" width="36" height="36" alt="Mail" /> <strong>GMail</strong> deepak.mk17@gmail.com</a></li>
+                        <li><a href="http://students.iiit.ac.in/" class="external"><img src="img/icons/iiith.jpeg" width="36" height="36" alt="IIIT Webmail" /> <strong>IIIT Webmail</strong>deepak.kathayat@students.iiit.ac.in</a></li>                       
+                        <li><a href="http://facebook.com/" class="external"><img src="img/icons/facebook.png" alt="Facebook" />
+                        <strong>Facebook</strong>Not on Facebook yet</a></li>
+                        <li><a href="http://twitter.com/" class="external"><img src="img/icons/twitter.png" alt="Twitter" />
+                        <strong>Twitter</strong>Not on Twitter yet</a></li>
+                        <li><a href="http://linkedin.com/" class="external"><img src="img/icons/linkedin.png" alt="Linkedin" />
+                        <strong>LinkedIn</strong>Not on LinkedIn yet</a></li>
+                    </ul>
+                </li>
+
+            <li id="contact" class="section">
+                    <h2>Contact</h2>
+                    <div id="address">
+                        <h3>Deepak M.Kathayat</h3>
+                        <p>D-226, Old Boys Hostel,<br />
+                        IIIT Hyderabad,<br />
+                        Hyderabad, India</p>
+                        <p>Telephone: +91 022 2760 0860<br />
+                        Mobile: +91 77 99 255 111<br />
+                        E-mail: <a href="deepak.mk17@gmail.com">deepak.mk17@gmail.com</a><br />   &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="deepak.kathayat@students.iiit.ac.in">deepak.kathayat@students.iiit.ac.in</a>
+                        </p>
+                    </div>
+                    <div id="map">
+                    <img src="img/icons/iiitmap.jpeg" alt="IIIT-H map" width="238" height="174" />
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+    &middot; © 2012 Deepak Kathayat &middot;
+</div>
+  
+<script type="text/javascript">
+$('.poptroxactive').each(function() {
+   $(this).poptrox();
+});
+</script>
+</div>
+</body>
+</html>
